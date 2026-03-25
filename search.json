@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html#motivation",
+    "href": "index.html#motivation",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Motivation",
+    "text": "Motivation\n\nUS Federal Reserve (Fed) releases interest rate decisions\nvia Federal Open Market Committee (FOMC) meetings (incl. press conference)\n\n\n\nusing high-frequency variables, we can determine quasi-causally, how big the impact of the FOMC meetings is on certain financial variables"
+  },
+  {
+    "objectID": "index.html#problem-setting",
+    "href": "index.html#problem-setting",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Problem Setting",
+    "text": "Problem Setting\n\ndoes the inclusion of audio recording of FOMC press recording give superior information for markets?\n\n\nfinancial variables and macro variables (= high-frequency?)"
+  },
+  {
+    "objectID": "index.html#current-sota",
+    "href": "index.html#current-sota",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Current SOTA",
+    "text": "Current SOTA\n\nVoice of MP paper (Gorodnichenko et al. 2023)\n\nDeep learning/neural network model for speech emotion detection\nBERT for text analysis\n\nshows: positive emotion in audio of FOMC press-conference means hike in S&P500 (controlled for text sentiment)"
+  },
+  {
+    "objectID": "index.html#our-approach",
+    "href": "index.html#our-approach",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Our Approach",
+    "text": "Our Approach\n\n\nReplicate Gorodnichenko et al. 2023 for ECB\nEurope: multi-lingual currency union. How does voice tone affect markets differently?\nAudio: Compare North American Speech vs. European Speech for training\nText: Compare effectiveness of different text embeddings & different sentiment analysis methods\n\n\n\nAsk the group? what do you think of the scope?"
+  },
+  {
+    "objectID": "index.html#our-approach-audio",
+    "href": "index.html#our-approach-audio",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Our Approach: Audio",
+    "text": "Our Approach: Audio\n\nBaseline: Replicate the original paper and train on RAVDESS + TESS.\nEuropean-Accent Dataset: Use a dataset featuring European non-native English speakers (eNTERFACE’05/GEMEP/CREMA-D).\nMultilingual Pre-Trained Model: Fine-tune a pre-trained speech model (e.g. Wav2Vec2-XLSR, HuBERT)"
+  },
+  {
+    "objectID": "index.html#our-approach-text",
+    "href": "index.html#our-approach-text",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Our Approach: Text",
+    "text": "Our Approach: Text"
+  },
+  {
+    "objectID": "index.html#evaluation-protocols",
+    "href": "index.html#evaluation-protocols",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Evaluation Protocols",
+    "text": "Evaluation Protocols\n\nBenchmark: North American Speech vs. European Speech"
+  },
+  {
+    "objectID": "index.html#datasets-data-collection",
+    "href": "index.html#datasets-data-collection",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Datasets, Data Collection",
+    "text": "Datasets, Data Collection\n\nDatasets: Transcripts and records of ECB press conferences, available on the ECB Website and YouTube\nScraping of ECB Website + YouTube API"
+  },
+  {
+    "objectID": "index.html#results",
+    "href": "index.html#results",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Results",
+    "text": "Results\ntbd."
+  },
+  {
+    "objectID": "index.html#questions",
+    "href": "index.html#questions",
+    "title": "Voice of Monetary Policy Replication",
+    "section": "Questions",
+    "text": "Questions\n\nSupervision?\nOpen for Adjustments to Approach!\nCompute?"
+  }
+]
