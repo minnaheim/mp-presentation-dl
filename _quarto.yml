@@ -1,0 +1,10 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Voice of Monetary Policy Replication"
+  navbar:
+    left:
+      - href: index.html
+        text: Presentation

@@ -1,7 +1,9 @@
 ---
 title: "Voice of Monetary Policy Replication"
 author: "Minna, Lasse, Alex"
-format: revealjs
+format:
+  revealjs:
+    output-file: index.html
 ---
 
 
