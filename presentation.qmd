@@ -1,0 +1,82 @@
+---
+title: "Voice of Monetary Policy Replication"
+author: "Minna, Lasse, Alex"
+format: revealjs
+---
+
+
+## Motivation
+- US Federal Reserve (Fed) releases interest rate decisions 
+- via Federal Open Market Committee (FOMC) meetings (incl. press conference)
+
+
+::: {.notes}
+
+- using high-frequency variables, we can determine quasi-causally, how big the impact of the FOMC meetings is on certain financial variables
+
+:::
+
+
+## Problem Setting
+
+- does the inclusion of audio recording of FOMC press recording give superior information for markets?
+
+
+::: {.notes}
+
+financial variables and macro variables (= high-frequency?)
+
+:::
+
+
+## Current SOTA
+
+- Voice of MP paper (Gorodnichenko et al. 2023)
+  - Deep learning/neural network model for speech emotion detection 
+  - BERT for text analysis 
+- shows: positive emotion in audio of FOMC press-conference means hike in S&P500 (controlled for text sentiment)
+
+
+## Our Approach
+
+::: {.incremental}
+1. Replicate Gorodnichenko et al. 2023 for ECB
+2. Europe: multi-lingual currency union. How does voice tone affect markets differently?
+3. Audio: Compare North American Speech vs. European Speech for training
+4. Text: Compare effectiveness of different text embeddings & different sentiment analysis methods
+:::
+
+::: {.notes}
+Ask the group? what do you think of the scope?
+:::
+
+## Our Approach: Audio
+
+- *Baseline*: Replicate the original paper and train on RAVDESS + TESS.
+- *European-Accent Dataset*: Use a dataset featuring European non-native English speakers (eNTERFACE'05/GEMEP/CREMA-D).
+- *Multilingual Pre-Trained Model*: Fine-tune a pre-trained speech model (e.g. Wav2Vec2-XLSR, HuBERT)
+
+## Our Approach: Text
+
+
+
+
+## Evaluation Protocols
+- Benchmark: North American Speech vs. European Speech 
+- 
+
+
+## Datasets, Data Collection
+- Datasets: Transcripts and records of ECB press conferences, available on the ECB Website and YouTube
+- Scraping of ECB Website + YouTube API
+
+
+## Results
+tbd. 
+
+
+## Questions
+- Supervision?
+- Open for Adjustments to Approach!
+- Compute?
+
