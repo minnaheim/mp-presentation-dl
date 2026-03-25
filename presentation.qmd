@@ -1,84 +1,78 @@
 ---
-title: "Voice of Monetary Policy Replication"
+title: "Master Project Pitch"
+subtitle: "Voice of Monetary Policy: A Replication and Extension"
 author: "Minna, Lasse, Alex"
 format:
   revealjs:
     output-file: index.html
 ---
 
-
 ## Motivation
-- US Federal Reserve (Fed) releases interest rate decisions 
-- via Federal Open Market Committee (FOMC) meetings (incl. press conference)
-
+- The US Federal Reserve (Fed) releases interest rate decisions 
+- via Federal Open Market Committee (FOMC) meetings (including press conferences).
+- Research shows that FOMC meetings significantly impact high-frequency financial variables.^[Nakamura and Steinsson, 2018]
 
 ::: {.notes}
-
-- using high-frequency variables, we can determine quasi-causally, how big the impact of the FOMC meetings is on certain financial variables
-
+Using high-frequency variables, we can determine quasi-causally how large the impact of FOMC meetings is on specific financial variables.
 :::
-
 
 ## Problem Setting
 
-- does the inclusion of audio recording of FOMC press recording give superior information for markets?
-
-
-::: {.notes}
-
-financial variables and macro variables (= high-frequency?)
-
+::: {.incremental}
+- What factors influence high-frequency financial markets?
+- Sentiment in text transcripts of Central Bank meetings affects financial markets^[Boukus, E. R., & Rosenberg, J. V. (2006)].
+- **RQ:** Does the inclusion of voice recordings and text transcripts of ECB meetings affect financial markets differently than text sentiment alone?
 :::
 
+::: {.notes}
+Do financial variables and macro variables react differently to tone versus text?
+:::
 
 ## Current SOTA
 
-- Voice of MP paper (Gorodnichenko et al. 2023)
-  - Deep learning/neural network model for speech emotion detection 
-  - BERT for text analysis 
-- shows: positive emotion in audio of FOMC press-conference means hike in S&P500 (controlled for text sentiment)
-
+- **Voice of MP paper** (Gorodnichenko et al., 2023):
+  - Deep learning/neural network model for speech emotion detection.
+  - BERT for text analysis.
+- **Key Finding:** Positive emotion in the audio of FOMC press conferences correlates with a hike in the S&P 500 (controlled for text sentiment).
 
 ## Our Approach
 
 ::: {.incremental}
-1. Replicate Gorodnichenko et al. 2023 for ECB
-2. Europe: multi-lingual currency union. How does voice tone affect markets differently?
-3. Audio: Compare North American Speech vs. European Speech for training
-4. Text: Compare effectiveness of different text embeddings & different sentiment analysis methods
+1. **Replicate** Gorodnichenko et al. (2023) for the ECB.
+2. **The European Context:** As a multilingual currency union, how does voice tone affect markets differently across regions?
+3. **Audio:** Compare North American speech vs. European accented speech for model training.
+4. **Text:** Compare the effectiveness of various text embeddings and sentiment analysis methods.
 :::
 
 ::: {.notes}
-Ask the group? what do you think of the scope?
+Ask the group: What do you think of the scope? Is it too broad or just right?
 :::
 
 ## Our Approach: Audio
 
-- *Baseline*: Replicate the original paper and train on RAVDESS + TESS.
-- *European-Accent Dataset*: Use a dataset featuring European non-native English speakers (eNTERFACE'05/GEMEP/CREMA-D).
-- *Multilingual Pre-Trained Model*: Fine-tune a pre-trained speech model (e.g. Wav2Vec2-XLSR, HuBERT)
+- **Baseline:** Replicate the original paper and train on RAVDESS + TESS datasets.
+- **European-Accent Dataset:** datasets featuring European non-native English speakers (e.g., eNTERFACE'05, GEMEP, or CREMA-D).
+- **Multilingual Pre-Trained Model:** Fine-tune a pre-trained speech model (e.g., Wav2Vec2-XLSR, HuBERT).
 
 ## Our Approach: Text
 
-
-
+- **Model Benchmarking:**
+  - Original BERT trained with FOMC data.
+- **Field-Specific BERTs:** 
+  - FinBERT
+  - CB-RoBERTa, etc.
 
 ## Evaluation Protocols
-- Benchmark: North American Speech vs. European Speech 
-- 
+- **Replicate original setup** on FOMC (baseline):
+  - Apply same pipeline to the ECB.
+  - Compare effect sizes (e.g., impact on yields / rate expectations).
+- **Compare models** (BERT vs. FinBERT/EconBERT vs. LLM prompting) by accuracy and F1 score (i.e., prediction quality).
 
-
-## Datasets, Data Collection
-- Datasets: Transcripts and records of ECB press conferences, available on the ECB Website and YouTube
-- Scraping of ECB Website + YouTube API
-
-
-## Results
-tbd. 
-
+## Datasets & Data Collection
+- Transcripts and recordings of ECB press conferences available via the ECB website and YouTube.
+- Web scraping of the ECB site and utilization of the YouTube API.
 
 ## Questions
 - Supervision?
-- Open for Adjustments to Approach!
-- Compute?
-
+- Suggestions for adjustments to our approach?
+- Compute resources?
