@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.45">
 
   <meta name="author" content="Minna, Lasse, Alex">
-  <title>Voice of Monetary Policy Replication</title>
+  <title>Voice of Monetary Policy Replication – Master Project Pitch</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Voice of Monetary Policy Replication</h1>
+  <h1 class="title">Master Project Pitch</h1>
+  <p class="subtitle">Voice of Monetary Policy: A Replication and Extension</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -340,13 +341,12 @@ Minna, Lasse, Alex
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
 <ul>
-<li>US Federal Reserve (Fed) releases interest rate decisions</li>
-<li>via Federal Open Market Committee (FOMC) meetings (incl.&nbsp;press conference)</li>
+<li>The US Federal Reserve (Fed) releases interest rate decisions</li>
+<li>via Federal Open Market Committee (FOMC) meetings (including press conferences).</li>
+<li>Research shows that FOMC meetings significantly impact high-frequency financial variables.<sup>1</sup></li>
 </ul>
 <aside class="notes">
-<ul>
-<li>using high-frequency variables, we can determine quasi-causally, how big the impact of the FOMC meetings is on certain financial variables</li>
-</ul>
+<p>Using high-frequency variables, we can determine quasi-causally how large the impact of FOMC meetings is on specific financial variables.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -358,14 +358,18 @@ Minna, Lasse, Alex
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Nakamura and Steinsson, 2018</p></li></ol></aside></section>
 <section id="problem-setting" class="slide level2">
 <h2>Problem Setting</h2>
+<div>
 <ul>
-<li>does the inclusion of audio recording of FOMC press recording give superior information for markets?</li>
+<li class="fragment">What factors influence high-frequency financial markets?</li>
+<li class="fragment">Sentiment in text transcripts of Central Bank meetings affects financial markets<sup>1</sup>.</li>
+<li class="fragment"><strong>RQ:</strong> Does the inclusion of voice recordings and text transcripts of ECB meetings affect financial markets differently than text sentiment alone?</li>
 </ul>
+</div>
 <aside class="notes">
-<p>financial variables and macro variables (= high-frequency?)</p>
+<p>Do financial variables and macro variables react differently to tone versus text?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -377,30 +381,30 @@ Minna, Lasse, Alex
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Boukus, E. R., &amp; Rosenberg, J. V. (2006)</p></li></ol></aside></section>
 <section id="current-sota" class="slide level2">
 <h2>Current SOTA</h2>
 <ul>
-<li>Voice of MP paper (Gorodnichenko et al.&nbsp;2023)
+<li><strong>Voice of MP paper</strong> (Gorodnichenko et al., 2023):
 <ul>
-<li>Deep learning/neural network model for speech emotion detection</li>
-<li>BERT for text analysis</li>
+<li>Deep learning/neural network model for speech emotion detection.</li>
+<li>BERT for text analysis.</li>
 </ul></li>
-<li>shows: positive emotion in audio of FOMC press-conference means hike in S&amp;P500 (controlled for text sentiment)</li>
+<li><strong>Key Finding:</strong> Positive emotion in the audio of FOMC press conferences correlates with a hike in the S&amp;P 500 (controlled for text sentiment).</li>
 </ul>
 </section>
 <section id="our-approach" class="slide level2">
 <h2>Our Approach</h2>
 <div>
 <ol type="1">
-<li class="fragment">Replicate Gorodnichenko et al.&nbsp;2023 for ECB</li>
-<li class="fragment">Europe: multi-lingual currency union. How does voice tone affect markets differently?</li>
-<li class="fragment">Audio: Compare North American Speech vs.&nbsp;European Speech for training</li>
-<li class="fragment">Text: Compare effectiveness of different text embeddings &amp; different sentiment analysis methods</li>
+<li class="fragment"><strong>Replicate</strong> Gorodnichenko et al.&nbsp;(2023) for the ECB.</li>
+<li class="fragment"><strong>The European Context:</strong> As a multilingual currency union, how does voice tone affect markets differently across regions?</li>
+<li class="fragment"><strong>Audio:</strong> Compare North American speech vs.&nbsp;European accented speech for model training.</li>
+<li class="fragment"><strong>Text:</strong> Compare the effectiveness of various text embeddings and sentiment analysis methods.</li>
 </ol>
 </div>
 <aside class="notes">
-<p>Ask the group? what do you think of the scope?</p>
+<p>Ask the group: What do you think of the scope? Is it too broad or just right?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -416,38 +420,49 @@ Minna, Lasse, Alex
 <section id="our-approach-audio" class="slide level2">
 <h2>Our Approach: Audio</h2>
 <ul>
-<li><em>Baseline</em>: Replicate the original paper and train on RAVDESS + TESS.</li>
-<li><em>European-Accent Dataset</em>: Use a dataset featuring European non-native English speakers (eNTERFACE’05/GEMEP/CREMA-D).</li>
-<li><em>Multilingual Pre-Trained Model</em>: Fine-tune a pre-trained speech model (e.g.&nbsp;Wav2Vec2-XLSR, HuBERT)</li>
+<li><strong>Baseline:</strong> Replicate the original paper and train on RAVDESS + TESS datasets.</li>
+<li><strong>European-Accent Dataset:</strong> datasets featuring European non-native English speakers (e.g., eNTERFACE’05, GEMEP, or CREMA-D).</li>
+<li><strong>Multilingual Pre-Trained Model:</strong> Fine-tune a pre-trained speech model (e.g., Wav2Vec2-XLSR, HuBERT).</li>
 </ul>
 </section>
 <section id="our-approach-text" class="slide level2">
 <h2>Our Approach: Text</h2>
+<ul>
+<li><strong>Model Benchmarking:</strong>
+<ul>
+<li>Original BERT trained with FOMC data.</li>
+</ul></li>
+<li><strong>Field-Specific BERTs:</strong>
+<ul>
+<li>FinBERT</li>
+<li>CB-RoBERTa, etc.</li>
+</ul></li>
+</ul>
 </section>
 <section id="evaluation-protocols" class="slide level2">
 <h2>Evaluation Protocols</h2>
 <ul>
-<li>Benchmark: North American Speech vs.&nbsp;European Speech</li>
-<li></li>
+<li><strong>Replicate original setup</strong> on FOMC (baseline):
+<ul>
+<li>Apply same pipeline to the ECB.</li>
+<li>Compare effect sizes (e.g., impact on yields / rate expectations).</li>
+</ul></li>
+<li><strong>Compare models</strong> (BERT vs.&nbsp;FinBERT/EconBERT vs.&nbsp;LLM prompting) by accuracy and F1 score (i.e., prediction quality).</li>
 </ul>
 </section>
 <section id="datasets-data-collection" class="slide level2">
-<h2>Datasets, Data Collection</h2>
+<h2>Datasets &amp; Data Collection</h2>
 <ul>
-<li>Datasets: Transcripts and records of ECB press conferences, available on the ECB Website and YouTube</li>
-<li>Scraping of ECB Website + YouTube API</li>
+<li>Transcripts and recordings of ECB press conferences available via the ECB website and YouTube.</li>
+<li>Web scraping of the ECB site and utilization of the YouTube API.</li>
 </ul>
-</section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
-<p>tbd.</p>
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
 <ul>
 <li>Supervision?</li>
-<li>Open for Adjustments to Approach!</li>
-<li>Compute?</li>
+<li>Suggestions for adjustments to our approach?</li>
+<li>Compute resources?</li>
 </ul>
 
 <div class="quarto-auto-generated-content">
@@ -456,6 +471,7 @@ Minna, Lasse, Alex
 </div>
 </div>
 </section>
+
     </div>
   </div>
 
@@ -755,7 +771,7 @@ Minna, Lasse, Alex
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/minnaheim\.github\.io\/mp-presentation-dl\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

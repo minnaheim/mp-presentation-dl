@@ -2,71 +2,64 @@
   {
     "objectID": "index.html#motivation",
     "href": "index.html#motivation",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Motivation",
-    "text": "Motivation\n\nUS Federal Reserve (Fed) releases interest rate decisions\nvia Federal Open Market Committee (FOMC) meetings (incl. press conference)\n\n\n\nusing high-frequency variables, we can determine quasi-causally, how big the impact of the FOMC meetings is on certain financial variables"
+    "text": "Motivation\n\nThe US Federal Reserve (Fed) releases interest rate decisions\nvia Federal Open Market Committee (FOMC) meetings (including press conferences).\nResearch shows that FOMC meetings significantly impact high-frequency financial variables.1\n\n\nUsing high-frequency variables, we can determine quasi-causally how large the impact of FOMC meetings is on specific financial variables.\n\nNakamura and Steinsson, 2018"
   },
   {
     "objectID": "index.html#problem-setting",
     "href": "index.html#problem-setting",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Problem Setting",
-    "text": "Problem Setting\n\ndoes the inclusion of audio recording of FOMC press recording give superior information for markets?\n\n\nfinancial variables and macro variables (= high-frequency?)"
+    "text": "Problem Setting\n\n\nWhat factors influence high-frequency financial markets?\nSentiment in text transcripts of Central Bank meetings affects financial markets1.\nRQ: Does the inclusion of voice recordings and text transcripts of ECB meetings affect financial markets differently than text sentiment alone?\n\n\n\nDo financial variables and macro variables react differently to tone versus text?\n\nBoukus, E. R., & Rosenberg, J. V. (2006)"
   },
   {
     "objectID": "index.html#current-sota",
     "href": "index.html#current-sota",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Current SOTA",
-    "text": "Current SOTA\n\nVoice of MP paper (Gorodnichenko et al. 2023)\n\nDeep learning/neural network model for speech emotion detection\nBERT for text analysis\n\nshows: positive emotion in audio of FOMC press-conference means hike in S&P500 (controlled for text sentiment)"
+    "text": "Current SOTA\n\nVoice of MP paper (Gorodnichenko et al., 2023):\n\nDeep learning/neural network model for speech emotion detection.\nBERT for text analysis.\n\nKey Finding: Positive emotion in the audio of FOMC press conferences correlates with a hike in the S&P 500 (controlled for text sentiment)."
   },
   {
     "objectID": "index.html#our-approach",
     "href": "index.html#our-approach",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Our Approach",
-    "text": "Our Approach\n\n\nReplicate Gorodnichenko et al. 2023 for ECB\nEurope: multi-lingual currency union. How does voice tone affect markets differently?\nAudio: Compare North American Speech vs. European Speech for training\nText: Compare effectiveness of different text embeddings & different sentiment analysis methods\n\n\n\nAsk the group? what do you think of the scope?"
+    "text": "Our Approach\n\n\nReplicate Gorodnichenko et al. (2023) for the ECB.\nThe European Context: As a multilingual currency union, how does voice tone affect markets differently across regions?\nAudio: Compare North American speech vs. European accented speech for model training.\nText: Compare the effectiveness of various text embeddings and sentiment analysis methods.\n\n\n\nAsk the group: What do you think of the scope? Is it too broad or just right?"
   },
   {
     "objectID": "index.html#our-approach-audio",
     "href": "index.html#our-approach-audio",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Our Approach: Audio",
-    "text": "Our Approach: Audio\n\nBaseline: Replicate the original paper and train on RAVDESS + TESS.\nEuropean-Accent Dataset: Use a dataset featuring European non-native English speakers (eNTERFACE’05/GEMEP/CREMA-D).\nMultilingual Pre-Trained Model: Fine-tune a pre-trained speech model (e.g. Wav2Vec2-XLSR, HuBERT)"
+    "text": "Our Approach: Audio\n\nBaseline: Replicate the original paper and train on RAVDESS + TESS datasets.\nEuropean-Accent Dataset: datasets featuring European non-native English speakers (e.g., eNTERFACE’05, GEMEP, or CREMA-D).\nMultilingual Pre-Trained Model: Fine-tune a pre-trained speech model (e.g., Wav2Vec2-XLSR, HuBERT)."
   },
   {
     "objectID": "index.html#our-approach-text",
     "href": "index.html#our-approach-text",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Our Approach: Text",
-    "text": "Our Approach: Text"
+    "text": "Our Approach: Text\n\nModel Benchmarking:\n\nOriginal BERT trained with FOMC data.\n\nField-Specific BERTs:\n\nFinBERT\nCB-RoBERTa, etc."
   },
   {
     "objectID": "index.html#evaluation-protocols",
     "href": "index.html#evaluation-protocols",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Evaluation Protocols",
-    "text": "Evaluation Protocols\n\nBenchmark: North American Speech vs. European Speech"
+    "text": "Evaluation Protocols\n\nReplicate original setup on FOMC (baseline):\n\nApply same pipeline to the ECB.\nCompare effect sizes (e.g., impact on yields / rate expectations).\n\nCompare models (BERT vs. FinBERT/EconBERT vs. LLM prompting) by accuracy and F1 score (i.e., prediction quality)."
   },
   {
     "objectID": "index.html#datasets-data-collection",
     "href": "index.html#datasets-data-collection",
-    "title": "Voice of Monetary Policy Replication",
-    "section": "Datasets, Data Collection",
-    "text": "Datasets, Data Collection\n\nDatasets: Transcripts and records of ECB press conferences, available on the ECB Website and YouTube\nScraping of ECB Website + YouTube API"
-  },
-  {
-    "objectID": "index.html#results",
-    "href": "index.html#results",
-    "title": "Voice of Monetary Policy Replication",
-    "section": "Results",
-    "text": "Results\ntbd."
+    "title": "Master Project Pitch",
+    "section": "Datasets & Data Collection",
+    "text": "Datasets & Data Collection\n\nTranscripts and recordings of ECB press conferences available via the ECB website and YouTube.\nWeb scraping of the ECB site and utilization of the YouTube API."
   },
   {
     "objectID": "index.html#questions",
     "href": "index.html#questions",
-    "title": "Voice of Monetary Policy Replication",
+    "title": "Master Project Pitch",
     "section": "Questions",
-    "text": "Questions\n\nSupervision?\nOpen for Adjustments to Approach!\nCompute?"
+    "text": "Questions\n\nSupervision?\nSuggestions for adjustments to our approach?\nCompute resources?"
   }
 ]
